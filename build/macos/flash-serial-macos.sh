@@ -16,7 +16,8 @@ parameterMissing() {
 
 flash() {
     printf "Flashing ${keyboard}:${keymap}:${target} over serial port\n\n"
-    nrfutil --verbose dfu serial -pkg ../../output/${keyboard}/${keyboard}-${keymap}-${target}.zip -p ${port} -b 115200
+    /Users/rross/Library/Arduino15/packages/adafruit/hardware/nrf52/0.20.1/tools/adafruit-nrfutil/macos/adafruit-nrfutil \
+    --verbose dfu serial -pkg ../../output/${keyboard}/${keyboard}-${keymap}-${target}.zip -p ${port} -b 115200
 }
 
 RED='\033[0;31m'
